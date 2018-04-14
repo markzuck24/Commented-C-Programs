@@ -1,0 +1,27 @@
+
+#include<stdio.h>
+#include<stdlib.h>//to use system()- a system defined function
+
+//the output is self-evident from the name of the program :P
+int main()
+{
+    printf("\n\n\t\tStudytonight - Best place to learn\n\n\n");
+
+    char ch;
+    printf("Do you want to shutdown the PC- (y/n) ?\n");
+    scanf("%c",&ch);
+
+    if(ch=='y'||ch=='Y')
+        system("C:\\WINDOWS\\System32\\shutdown -s");
+
+//To shutdown immediately use "C:\\WINDOWS\\System32\\shutdown -s -t 0". To restart use "-r" instead of "-s".
+// for better understanding go through the program for shutting down Windows 7, in which there is a detailed explanation of t and r instead of s
+// Note : '-' performs the same function in Windows XP as that performed by '/' incase of Windows 7
+
+
+
+    printf("\n\n\t\t\tCoding is Fun !\n\n\n");
+    return 0;
+
+
+}
