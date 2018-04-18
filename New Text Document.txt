@@ -1,20 +1,45 @@
 #include <stdio.h>
-
+/* switch case can be without default case*/
 int main()
 {
 
     printf("\n\n\t\tStudytonight - Best place to learn\n\n\n");
 
-    int number;
-    printf("Please enter a number:\n");
-    scanf("%d",&number);
+    /* local variable definition */
+    char grade;// char are always initialized within ''
+    printf("Enter your grade\n");
+    scanf("%c", &grade);
 
-    if(number<100)
-        printf("Number is less than 100!\n");
-    else if(number ==100)
-        printf("Number is 100!\n");
-    else
-        printf("Number is greater than 100!\n");
+    //switch() can only contain char and int
+    switch(grade)
+    {
+    case 'A':
+        printf("Excellent\n");
+        break;
+
+    case 'B':
+        printf("Keep it up!\n\n");
+        break;
+
+    case ('C'):// no need to enclose multiple statements within brackets
+        printf("Well done\nbreak keyword takes execution to exit the switch case\n\n");
+        break;//takes execution to exit the switch case
+
+        case 'D':
+        printf("You passed\n");
+        break;
+
+    case 'F':
+        printf("Better luck next time\n");
+        break;
+
+    default:
+        printf("Invalid grade\n");
+        //no need for break keyword for default case as it always gets executed at the very end and is never followed by any other case
+
+
+    }
+        printf("Your grade is %c\n",grade);
 
     printf("\n\n\t\t\tCoding is Fun !\n\n\n");
     return 0;
